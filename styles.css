@@ -1,0 +1,405 @@
+* {
+    margin: 0;
+    padding: 5px 5px;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+body {
+    background-color: #d5d8db;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    gap: 50px;
+}
+
+/* Links e Botões */
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    transform: scale(1.05);
+}
+
+
+
+.btn-contato button {
+    color: #fff;
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #003c81;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+
+
+/* Cabeçalho */
+header {
+    padding: 40px 4%;
+    background-color: #003c81;
+    color: #fff;
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: #ccc;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+header nav ul li a:hover {
+    color: #fff;
+}
+
+header img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Seção Topo do Site */
+section.topo-do-site {
+    padding: 60px 4%;
+    text-align: center;
+    color: #fff;
+}
+
+.topo-do-site h1 {
+    font-size: 38px;
+}
+
+.topo-do-site h1 span {
+    color: rgb(79, 0, 226);
+}
+
+.topo-do-site .txt-topo-site p {
+    margin: 40px 0;
+    line-height: 1.6;
+}
+
+.topo-do-site .img-topo-site img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(30px);
+    }
+}
+
+/* Seção Especialidades */
+section.especialidades {
+    padding: 60px 4%;
+    background-color: #fff;
+}
+
+section.especialidades h2.titulo {
+    font-size: 40px;
+    text-align: center;
+    color: #003c81;
+    margin-bottom: 40px;
+}
+
+section.especialidades h2.titulo span {
+    color: rgb(0, 0, 156);
+}
+
+.especialidades .especialidades-box {
+    text-align: center;
+    color: #003c81;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.especialidades .especialidades-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.especialidades .especialidades-box i {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+/* Seção Sobre */
+section.sobre {
+    padding: 40px 4%;
+}
+
+.sobre .flex {
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .img-sobre img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.sobre .txt-sobre {
+    color: #003c81;
+}
+
+.sobre .txt-sobre h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.sobre .txt-sobre h2 span {
+    display: block;
+    color: #003c81;
+}
+
+.sobre .btn-social a {
+    font-size: 24px;
+    color: #003c81;
+    margin-right: 10px;
+    transition: color 0.3s;
+}
+
+.sobre .btn-social a:hover {
+    color: #0066cc;
+}
+
+/* Menu Responsivo */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu-desktop {
+        display: none;
+    }
+
+    .menu-desktop.active {
+        display: block;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: #003c81;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .menu-desktop ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Estilo do Formulário de Contato */
+section.formulario {
+    padding: 80px 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Garante que ocupe toda a altura da tela */
+}
+
+form {
+    max-width: 500px;
+    width: 100%; /* Garante que o formulário não ultrapasse 100% da largura */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input, form textarea {
+    width: 100%;
+    background-color: #ccc;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 20px;
+    font-size: 18px;
+}
+
+form textarea {
+    resize: none;
+}
+
+form .btn-enviar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input {
+    width: 120px;
+    font-weight: 700;
+    background-color: #ccc;
+    color: #000000;
+    cursor: pointer;
+} 
+/*transaçao do potao de envio */
+form .btn-enviar input:hover {
+    
+     box-shadow: 0px 0px 8px rgba(17, 0, 255, 0.8);
+
+    transform: scale(1.05); /* Leve aumento no botão ao passar o mouse */
+}
+/* Estilo do Título dentro do Formulário */
+.formulario h2.titulo {
+    font-size: 36px; /* Tamanho do texto */
+    text-align: center; /* Alinha o texto ao centro */
+    color: #003c81; /* Cor do texto */
+    margin-bottom: 30px; /* Espaço abaixo do título */
+}
+
+.formulario h2.titulo span {
+    color: rgb(79, 0, 226); /* Cor para o span, pode ser personalizada */
+}
+/* Breakpoint Mobile */
+@media (max-width: 768px) {
+    /* Cabeçalho */
+    header {
+        padding: 20px 4%;
+    }
+
+    header img {
+        width: 120px; /* Reduz o tamanho da imagem no cabeçalho */
+        height: 120px;
+    }
+
+    /* Seção Topo do Site */
+    section.topo-do-site {
+        padding: 30px 4%;
+    }
+
+    .topo-do-site h1 {
+        font-size: 28px; /* Ajusta o tamanho da fonte */
+    }
+
+    .topo-do-site .txt-topo-site p {
+        font-size: 16px; /* Ajusta o tamanho da fonte */
+        margin: 20px 0;
+    }
+
+    .topo-do-site .img-topo-site img {
+        width: 100%; /* Reduz o tamanho da imagem */
+        height: auto;
+        animation: none; /* Remove a animação para celulares */
+    }
+
+    /* Seção Especialidades */
+    section.especialidades {
+        padding: 40px 4%;
+    }
+
+    section.especialidades h2.titulo {
+        font-size: 32px;
+    }
+
+    .especialidades .especialidades-box {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .especialidades .especialidades-box i {
+        font-size: 36px;
+    }
+
+    /* Seção Sobre */
+    section.sobre {
+        padding: 40px 4%;
+    }
+
+    .sobre .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sobre .img-sobre img {
+        width: 250px; /* Ajusta o tamanho da imagem */
+    }
+
+    .sobre .txt-sobre h2 {
+        font-size: 28px;
+    }
+
+    .sobre .btn-social a {
+        font-size: 20px;
+    }
+
+    /* Formulário de Contato */
+    section.formulario {
+        padding: 40px 4%;
+    }
+
+    form {
+        max-width: 100%;
+    }
+
+    form input, form textarea {
+        padding: 15px 10px;
+        font-size: 16px;
+    }
+
+    form .btn-enviar input {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    /* Menu Responsivo */
+    .menu-toggle {
+        font-size: 30px; /* Aumenta o tamanho do botão de menu */
+    }
+
+    .menu-desktop {
+        display: none; /* Esconde o menu desktop em telas menores */
+    }
+
+    .menu-desktop.active {
+        display: block;
+    }
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Renato Martins, estudante de Ciência da Computação. Projetos, conhecimentos e experiências compartilhados.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Renato Martins - Portfólio</title>
+</head>
+<body>
+    <header>
+        <div class="interface">
+            <div class="logo">
+                <a href="#">
+                    <img src="images/028e2f3e-9954-4b37-8986-57d04f1f71ba-removebg-preview.png" alt="Logo do Renato Martins">
+                </a>
+            </div>
+            <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="#" class="active">Início</a></li>
+                    <li><a href="#especialidades">Especialidades</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                </ul>
+            </nav>
+            <div class="btn-contato">
+                <a href="#"><button>Contato</button></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="topo-do-site" id="inicio">
+            <div class="interface">
+                <div class="flex">
+                    <div class="txt-topo-site">
+                        <h1>Renato Martins do Santo.</h1>
+                        <p>
+                            Olá, seja bem-vindo ao meu portfólio! Sou estudante de Ciência da Computação.
+                            Aqui, compartilho projetos, conhecimentos e experiências adquiridas ao longo da minha jornada acadêmica e prática.
+                        </p>
+                        <div class="btn-contato">
+                            <a href="#"><button>Entrar em Contato</button></a>
+                        </div>
+                    </div>
+                    <div class="img-topo-site">
+                        <img src="images/028e2f3e-9954-4b37-8986-57d04f1f71ba-removebg-preview.png" alt="Imagem do Renato no topo do site">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="especialidades" id="especialidades">
+            <div class="interface">
+                <h2 class="titulo">Minhas <span>Especialidades.</span></h2>
+                <div class="flex">
+                    <div class="especialidades-box">
+                        <i class="bi bi-code-slash"></i>
+                        <h3>Linguagens</h3>
+                        <p>Especialista em linguagens de programação como Python, JavaScript e SQL.</p>
+                    </div>
+                    <div class="especialidades-box">
+                        <i class="bi bi-gear"></i>
+                        <h3>Projetos</h3>
+                        <p>Desenvolvimento de sistemas, automação e aplicações web funcionais.</p>
+                    </div>
+                    <div class="especialidades-box">
+                        <i class="bi bi-laptop"></i>
+                        <h3>Design Responsivo</h3>
+                        <p>Criação de layouts modernos e adaptados para todos os dispositivos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sobre" id="sobre">
+            <div class="interface">
+                <div class="flex">
+                    <div class="img-sobre">
+                        <img src="images/4c37833b-731c-496b-b2f9-5b38f709b09b-removebg-preview.png" alt="Imagem sobre Renato">
+                    </div>
+                    <div class="txt-sobre">
+                        <h2>MUITO PRAZER, <span>SOU RENATO MARTINS.</span></h2>
+                        <p>Sou estudante de Ciência da Computação e uso esse espaço para compartilhar meus projetos, conhecimentos e experiências adquiridas ao longo da minha jornada.</p>
+                        <p>Nos momentos livres, gosto de passear com meu cachorro e organizar meu dia para aproveitá-lo ao máximo.</p>
+                        <div class="btn-social">
+                            <a href="https://www.instagram.com/ren4tosanto/profilecard/?igsh=MTJ2eXl3dnIxc3A3dQ%3D%3D"><i class="bi bi-instagram"></i></a>
+                            <a href="https://github.com/Renato-sys"><i class="bi bi-github"></i></a>
+                            <a href="https://www.linkedin.com/in/renato-martins-7554b9279/"><i class="bi bi-linkedin"></i></a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="formulario">
+            <div class="interface"> 
+                <h2 class="titulo">FALA <span>COMIGO.</span></h2>
+                <form action="enviar.php" method="POST">
+                    <input type="text" name="nome" id="nome" placeholder="Seu nome." required>
+                    <input type="email" name="email" id="email" placeholder="Seu e-mail." required>
+                    <input type="text" name="celular" id="celular" placeholder="Seu celular." required>
+                    <textarea name="mensagem" id="mensagem" placeholder="Sua mensagem" required></textarea>
+                    <div class="btn-enviar">
+                        <input type="submit" value="ENVIAR">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menuDesktop = document.querySelector('.menu-desktop');
+
+        menuToggle.addEventListener('click', () => {
+            menuDesktop.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
